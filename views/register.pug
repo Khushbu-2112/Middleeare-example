@@ -1,0 +1,17 @@
+extends layout
+block content
+    .text-center
+        br
+        h3 Register Page
+        br
+        .box
+            form.form-group(action="/users/register" method="post")
+                input.form-control(type="text" name="uname" placeholder="Enter username")
+                input.form-control(type="password" name="passw" placeholder="Enter password")
+                span Admin : 
+                    | Yes 
+                    input(type="radio" name='admin' value='true') 
+                    |  No 
+                    input(type="radio" name='admin' value='false')
+                br
+                button.btn.btn-primary.mt-2(type='submit') Sign-Up

@@ -1,0 +1,16 @@
+extends layout
+block content
+    .text-center
+        br
+        h3 Login Page
+        br
+        label.text-warning.h5
+            if msg
+                =msg
+        .box
+            form.form-group(action="/users/login" method="post")
+                input.form-control(type="text" name="uname" placeholder="Enter username")
+                input.form-control(type="password" name="passw" placeholder="Enter password")
+                button.btn.btn-primary.mt-2(type='submit') Sign-In
+        br
+        a(href='/register') Don't have account...? Register Here

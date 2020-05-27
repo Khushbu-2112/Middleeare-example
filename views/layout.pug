@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/stylesheets/css/bootstrap.min.css')
+  body
+    nav.navbar.fixed-top.navbar-dark.bg-dark.navbar-expand-lg
+      a.navbar-brand(href='/') Home
+      ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+        li.nav-item 
+          a.nav-link(href='/users/protected-route') Your Data
+        li.nav-item 
+          a.nav-link(href='/users/admin-route') All Data
+      span.navbar-text.mr-4  
+        if data
+          a(href='/users/logout') Logout
+        else
+          a(href='/login') Login
+    block content
+    footer.card-footer.text-center 
+      p © Developed by KRR

@@ -1,0 +1,10 @@
+extends layout
+block content
+    .text-center
+        br
+        br
+        label.h4.mt-4
+            | Welcome 
+            b #{data.username.charAt(0).toUpperCase() + data.username.slice(1)}
+        p You are logged in.
+            
